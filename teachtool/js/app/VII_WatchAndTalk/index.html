@@ -1,0 +1,126 @@
+﻿<div class="sh-taba">
+    <b class="fl"><em class="titicon"></em>{{title}}</b><p class="sh-operation"><span>收起</span><em class="up-icon"></em></p>
+</div>
+<div class="sh-topicbox">
+    {{if section}}
+        {{each section as sec i}}
+    {{if sec.type=='short_conversations'}}
+    <!--对话，选择题-->
+    <dl class="sh-topic">
+        <dt>
+            <div class="clearfix">
+                <p class="fl"><b class="blue">{{#sec.title}}</b></p>
+                <p class="sh-topicbtn fr">
+                    <!--<input type="button" value="录音" class="sh-btnblue" /><input type="button" value="回放" class="sh-btngray" />-->
+                </p>
+            </div>
+            <div class="pt5"><!--<strong>Directions:</strong>-->{{#sec.desc}}</div>
+        </dt>
+        <dd>
+            <ul class="sh-topicd">
+                {{each sec.list as li j}}
+                <li class="clearfix">
+                    <em>{{j+1}}</em>
+                    <div class="sh-options">
+                        {{each li.options as opt k}}
+                        <p>{{optionsFormat(opt,k)}}</p>
+                        {{/each}}
+                    </div>
+                    <font>
+                        <input type="button" value="" class="sh-btnplay" audiourl="{{li.sound}}" />
+                        <input type="button" value="" class="sh-btnidol" original="{{#li.original}}" />
+                    </font>
+                </li>
+                {{/each}}             
+            </ul>
+        </dd>
+    </dl>
+    {{else if sec.type=='short_passages'}}
+    <!--短文，选择题-->
+    <dl class="sh-topic">
+        <dt>
+            <div class="clearfix">
+                <p class="fl"><b class="blue">{{#sec.title}}</b></p>
+                <p class="sh-topicbtn fr">
+                    <!--<input type="button" value="录音" class="sh-btnblue" /><input type="button" value="回放" class="sh-btngray" />-->
+                </p>
+            </div>
+            <div class="pt5"><!--<strong>Directions:</strong>-->{{#sec.desc}}</div>
+        </dt>
+        <dd>{{each sec.group as gro j}}
+            <div class="sh-topicctips clearfix">
+                <p class="fl"><b>{{#gro.title}}</b></p>
+                <p class="fr">
+                    <input type="button" value="" class="sh-btnplay" audiourl="{{gro.sound}}" />
+                    <input type="button" value="" class="sh-btnidol" original="{{#gro.original}}" />
+                </p>
+            </div>
+            <ul class="sh-topicd">
+                {{each gro.list as li k}}
+                <li class="clearfix">
+                    <em>{{k+1}}</em>
+                    <div class="sh-options">
+                        {{each li.options as opt k}}
+                        <p>{{optionsFormat(opt,k)}}</p>
+                        {{/each}}
+                    </div>
+                    <font>
+                        <input type="button" value="" class="sh-btnplay" audiourl="{{li.sound}}" />
+                    </font>
+                </li>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </dd>
+    </dl>
+    {{else if sec.type=='longer_conversations'}}
+    <!--对话，完形填空-->
+    <dl class="sh-topic">
+        <dt>
+            <div class="clearfix">
+                <p class="fl"><b class="blue">{{#sec.title}}</b></p>
+                <p class="sh-topicbtn fr">
+                    <!--<input type="button" value="录音" class="sh-btnblue" /><input type="button" value="回放" class="sh-btngray" />-->
+                </p>
+            </div>
+            <div class="pt5"><!--<strong>Directions:</strong>-->{{#sec.desc}}</div>
+        </dt>
+        <dd>{{each sec.group as gro j}}
+            <div class="sh-topicctips clearfix">
+                <p class="fl"><b>{{#gro.title}}</b></p>
+                <p class="fr">
+                    <input type="button" value="" class="sh-btnplay" audiourl="{{gro.sound}}" />
+                    <input type="button" value="" class="sh-btnidol" original="{{#gro.original}}" />
+                    <input type="button" value="" class="sh-btnanswer" answer="{{#answerFormat(gro.answer)}}" />
+                </p>
+            </div>
+            {{if gro.sortText}}
+            <ul class="sh-topicd">
+                <li class="clearfix">
+                    <div class="sh-options">
+                        {{#gro.sortText}}
+                    </div>
+                </li>
+            </ul>
+            {{/if}}
+            <div class="ml20 mr20">
+                <table class="sh-topictable">
+                    {{each gro.list as row k}}
+                    <tr>
+                        {{each row as cell l}}
+                         <td colspan="{{gro.colspan[k][l]}}">{{#blankFormat(cell)}}</td>
+                        {{/each}}
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+            <!--<div class="sh-topicctips ml20 mr20">
+                <p>Complete the form. Write <span class="orange">one word</span> for each answer</p>
+            </div>-->
+            {{/each}}
+        </dd>
+    </dl>
+    {{/if}}
+        {{/each}}
+    {{/if}}
+</div>

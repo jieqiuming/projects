@@ -1,0 +1,18 @@
+﻿<div class="paperlist">
+    <div class="listen-sorting">
+        <div class="listen-emptbtn mt10">
+            <input type="button" name="btn_audio" audiourl="{{questions.relationUrl}}\{{questions.passageAudio}}" class="btn-play" value="" /><input type="button" name="btn_content" content="{{questions.passageText}}" class="btn-original" value="" /><input type="button" name="btn_answer" answer="{{questions.answerInfo}}" class="btn-answer" value="" />
+        </div>
+        {{each questions as question i}}
+                 <dl class="clearfix listen-sortlist">
+                     <dt>
+                         <input type="button" name="btn_audio" audiourl="{{question.relationUrl}}\{{question.questionAudio}}" class="btn-smallplay" oriclass="btn-smallplay" value="" /></dt>
+                     <dt>{{question.num}}.</dt>
+                     <dd class="linefour" questionNum="{{question.num}}">{{each question.choices as choice j}}
+                        <p><span style="cursor: pointer;" name="choice" questionNum="{{question.num}}" flag="{{j}}">{{#numToChar(j)}}.{{choice}}</span></p>
+                         {{/each}}
+                     </dd>
+                 </dl>
+        {{/each}}
+    </div>
+</div>

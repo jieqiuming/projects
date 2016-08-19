@@ -1,0 +1,53 @@
+﻿<div class="paperlist">
+    <div class="listen-empty">
+        {{each questions.sortContent as sort i}}
+                <div class="listen-emptytext listen-emptytext2">
+                    <dl>
+                        <dd><span>{{sort}}</span></dd>
+                    </dl>
+                </div>
+        {{/each}}
+                {{each questions.QuestionList as question j}}
+                <div class="listen-table">
+
+                    <table cellpadding="0" cellspacing="0" style="text-align: center;">
+                        {{if isObject(question.table.row)}}
+           <tr>
+               {{each question.table.row.data as cloumn c}}
+                   {{if isObject(cloumn)}}
+                          <td style="white-space: nowrap;" colspan="{{cloumn.colspan}}">{{#replaceInput(cloumn.data,questions.flag)}}</td>
+               {{else}}
+                        {{if isArray(cloumn)}}
+                            {{each cloumn as cell cl}}
+                               <td style="white-space: nowrap;" colspan="{{cell.colspan}}">{{#replaceInput(cell.data,questions.flag)}}</td>
+               {{/each}}
+                        {{/if}}
+                   {{/if}}
+               {{/each}}
+           </tr>
+                        {{else}}
+            {{each question.table.row as row r}}
+        <tr>
+            {{each row as cloumn c}}
+                   {{if isObject(cloumn)}}
+                           <td style="white-space: nowrap;" colspan="{{cloumn.colspan}}">{{#replaceInput(cloumn.data,questions.flag)}}</td>
+            {{else}}
+                        {{if isArray(cloumn)}}
+                            {{each cloumn as cell cl}}
+                                <td style="white-space: nowrap;" colspan="{{cell.colspan}}">{{#replaceInput(cell.data,questions.flag)}}</td>
+            {{/each}}
+                        {{/if}}
+                   {{/if}}
+               {{/each}}
+        </tr>
+                        {{/each}}
+        {{/if}}
+                    </table>
+
+                </div>
+        <div class="listen-emptbtn mt10">
+            <input type="button" name="btn_audio" audiourl="{{questions.relationUrl}}\{{questions.passageAudio}}" class="btn-play" value="" /><input type="button" name="btn_content" content="{{questions.passageText}}" class="btn-original" value="" /><input type="button" name="btn_answer" answer="{{question.answerText}}" class="btn-answer" value="" />
+        </div>
+        {{/each}}
+    </div>
+</div>

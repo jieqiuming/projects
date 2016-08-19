@@ -1,0 +1,11 @@
+﻿<ul class="paperlist">
+    {{each list}}
+    <li class="clearfix">
+        <em>{{$value.index}}</em>
+        <div class="text"><font>{{$value.content}}</font></div>
+         <div class="btn">
+            <input  name="btn_audio" type="button" class="btn-play" audioUrl="{{$value.Audiourl}}" value="" /><input name="btn_voice" controlid="{{$value.controlid}}" voicetime="{{$value.answertime}}" type="button" class="btn-voice" value="" /><input name="btn_refresh" class="{{$value.refreshClass}}" audiourl="{{$value.refreshAudio}}" type="button" value="" />
+        </div>
+    </li>
+    {{/each}}
+</ul>

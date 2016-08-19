@@ -1,0 +1,74 @@
+﻿<div class="paperlist">
+    <div class="listen-empty">
+        <div class="listen-emptbtn">
+            <input name="btn_audio" type="button" class="btn-play" audiourl="{{data.passageAudio}}" value=""><input id="btn_passageText" type="button" class="btn-original" value=""><input id="btn_answer" type="button" class="btn-answer" value="">
+        </div>
+        <div class="listen-emptytext">
+            <dl>
+                <dt style="text-align: center;">
+                    <img style="max-height: 300px;max-width: 820px;" src="{{data.ImageUrl}}"></dt>
+                <dd class="clearfix">{{each data.UserAswer}}
+                    <p><span>{{$index+1}}.</span><span><input name="input_answer" controlid="{{data.Controlid+($index+1)}}" style="height: 22px;" value="{{#$value}}" type="text" class="empty-input2" /></span></p>
+
+                    {{/each}}
+                </dd>
+            </dl>
+        </div>
+
+    </div>
+</div>
+<div id="pop_passageText" style="position: fixed; z-index: 999; display: none;" class="popbox pop-original">
+    <div class="clearfix pop-originaltab">
+        <p class="fl">听力原文</p>
+        <p class="fr">
+            <input type="button" name="pop_passageText_close" class="systembtn-close" value="">
+        </p>
+    </div>
+    <div class="popbox-font">
+        <div class="pop-originalfont">
+            <div class="pop-originalbox">
+                <div class="original-mark">
+                    <p class="mark-original"></p>
+                </div>
+                <div class="original-scrollbar">
+                    <div class="original-force">
+                        {{#data.passageText}}
+                    </div>
+                </div>
+            </div>
+            <div class="pop-originalbtn">
+                <!--<input type="button" class="btn-grey" value="取消">-->
+                <input name="pop_passageText_close" type="button" class="btn-blue" value="确定">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_answer" style="position: fixed; z-index: 999; display: none;" class="popbox pop-original">
+    <div class="clearfix pop-originaltab">
+        <p class="fl">参考答案</p>
+        <p class="fr">
+            <input name="pop_answer_close" type="button" class="systembtn-close" value="">
+        </p>
+    </div>
+    <div class="popbox-font">
+        <div class="pop-originalfont">
+            <div class="pop-originalbox">
+                <div class="original-mark">
+                    <p class="mark-answer"></p>
+                </div>
+                <div class="original-scrollbar">
+                    <div class="original-force">
+                        {{each data.AswerText}}
+                            <p>{{$value}}</p>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="pop-originalbtn">
+                <!-- <input type="button" class="btn-grey" value="取消">-->
+                <input name="pop_answer_close" type="button" class="btn-blue" value="确定">
+            </div>
+        </div>
+    </div>
+</div>
