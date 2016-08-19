@@ -1,0 +1,66 @@
+.radio-box{
+    margin-top: 5px;
+}
+.radio-box label *{
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+.radio-box input{
+    display: none;
+}
+.radio-box label{
+	display: inline-block;
+   	margin: 0 10px 0 20px;
+    padding-left: 25px;
+    height: 20px;
+    background: url("../../images/common/scu_ic.png") no-repeat 0 -72px;
+    color: #686868;
+    font-size: 14px;
+}
+.radio-box label.checked{
+    background-position: 0 -111px;
+}
+
+
+.select_box{
+	padding: 0 5px;
+	height: 36px;
+    position: relative;
+    z-index: 1;
+    line-height: 36px;
+    font-size: 14px;
+    color: #666;
+	border: 1px solid #dbdbdb;
+}
+.select_box span{
+    height: 36px;
+    display: block;
+    border-radius: 2px;
+    background: url(../../images/common/scu_ic.png) no-repeat;
+    cursor: pointer;
+    padding-right: 30px;
+    position: absolute;
+    z-index: 2;
+}
+.select_box ul{
+    position: absolute;
+    top: 36px;
+    left: -1px;
+	width: 100%;
+    border: 1px solid #d4d4d4;
+    background: #fff;
+    z-index: 3;
+    max-height: 188px;
+    overflow-y: auto;
+}
+.select_box ul li{
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+    margin: 0;
+}
+.select_box ul li:hover{
+    background: #e4e6ea;
+    color: #246ac9;
+}

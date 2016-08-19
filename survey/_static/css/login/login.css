@@ -1,0 +1,442 @@
+.form-gounp label{
+	display: inline-block;
+	width: 30%;
+	float: left;
+	padding-right: 10px;
+	color: #333;
+	font-size: 16px;
+	text-align: right;
+	line-height: 36px;
+}
+.sch-area,
+.area-sel{
+	position: relative;
+}
+.area-sel{
+	z-index: 3;
+}
+.sch-area{
+	z-index: 2;
+}
+.tel input{
+	width: 210px;
+	margin-right: 20px;
+	float: left;
+}
+.area-sel .select_box{
+	margin-right: 10px;	
+	width: 114px;
+}
+.area-sel .select_box span{
+	width: 82px;
+	background-position: 100px -24px;
+}
+.sch-area .select_box{
+	width: 390px;
+}
+.sch-area .select_box span{
+	width: 360px;
+	background-position: 372px -24px;
+}
+/*满意度*/
+.sat{
+	padding: 0 20px;
+}
+.sat-tit{
+	position: relative;
+	height: 86px;
+	border-bottom: 1px solid #d8d9e5;
+	font-size: 24px;
+	color: #333;
+	text-align: center;
+	line-height: 86px;
+}
+.sat-tit a{
+	position: absolute;
+	right: 15px;
+	top:0;
+	font-size: 14px;
+	color: #666;
+	line-height: 86px;
+}
+.eva-tit{
+	background: url(../../images/login/line.png) repeat-x 0 bottom;
+	font-size: 16px;
+	height: 60px;
+	line-height: 60px;
+	color: #333;
+}
+.eva-box .form-group{
+	margin: 20px 0 0 10px;
+}
+.eva-box .form-group>label{
+	display: block;
+	font-size: 16px;
+	color: #333;
+}
+.eva-box .radio-box{
+	margin-top: 20px;
+}
+.eva-sub-tit{
+	font-size: 16px;
+	padding: 30px 0 0;
+}
+.eva-box .submit-btns .tel label,
+.eva-box .submit-btns .tel input,
+.eva-box .submit-btns .tel a{
+	float: none;
+}
+.eva-box .submit-btns .tel label{
+	width: auto;
+}
+.eva-box .submit-btns .tel  input{
+	width: 120px;
+}
+.eva-box .submit-btns .tel a{
+	width: 60px;
+}
+.submit-btns .next-btn{
+	margin-top: 20px;
+}
+/*满意度end*/
+
+
+/*我参与的*/
+.join-box{
+	padding: 0 20px;
+}
+.join-box .research-tit{
+	height: 50px;
+}
+.join-box .research-tit h3{
+	padding: 0 15px 0 0;
+	font-size: 18px;
+	line-height: 49px;
+}
+.new-research{
+	padding-top: 10px;
+}
+.new-research dl{
+	padding-top: 20px;
+}
+.new-research dt,
+.new-research dd{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #333;
+}
+.new-research dt{
+	display: inline-block;
+	margin: 0 40px 0 10px;
+	padding-left: 40px;
+	background: url(../../images/common/scu_ic.png) no-repeat left -451px;
+}
+.new-research dt span{
+	float: left;
+	display: inline-block;
+	width: 300px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.new-research dt a{
+	float: left;
+	color: #246ac9;
+}
+.new-research dd span{
+	margin-right: 15px;
+}
+.join-sea {
+	padding: 20px 10px;
+}
+.state label{
+	float: left;
+	padding-right: 15px;
+	color: #555;
+	line-height: 34px;
+	font-size: 16px;
+}
+.state .select_box{
+	height: 32px;
+	line-height: 32px;
+	width: 164px;
+}
+.state .select_box span{
+	height: 32px;
+	width: 140px;
+	background-position: 150px -24px;
+}
+.state .select_box ul{
+	top:32px;
+}
+.join-sea-box{
+	border: 1px solid #dbdbdb;
+	height: 32px;
+}
+.join-sea-box input[type="text"]{
+	border: 0;
+	padding-left: 10px;
+	height: 32px;
+	width: 205px;
+	border-right: 1px solid #dbdbdb;
+	font-size: 14px;
+	color: #999;
+	line-height: 32px;
+}
+.join-sea-box input[type="button"]{
+	border: 0;
+	width: 46px;
+	height: 100%;
+	background: url(../../images/common/scu_ic.png) no-repeat 13px -523px #f1f2f6;
+	cursor: pointer;
+}
+.join-table{
+	margin-top: 20px;
+	width: 100%;
+	border: 1px solid #d8d9e5;
+	font-size: 14px;
+	text-align: center;
+}
+.join-table tr th{
+	background: #edeef2;
+	border-left: 1px solid #d8d9e5;
+	color: #333;
+	line-height: 40px;
+	text-align: center;
+}
+.join-table tr th:first-child{
+	border-left: 0;
+}
+.join-table tr td{
+	line-height: 50px;
+	color: #666;
+	border-top: 1px solid #d8d9e5;
+}
+.join-table tr td a{
+	color: #246ac9;
+}
+.join-table tr td a:hover{
+	text-decoration: underline;
+}
+.proceed-co{
+	color: #27a21e;
+}
+.no-start{
+	color: #e85c4a;
+}
+.join-table tr{
+	border-top: 1px solid #d8d9e5;
+}
+.join-table tr:first-child{
+	border-top: 0;
+}
+.operation-btn{
+	padding: 0 5%;
+}
+.operation-btn a{
+	float: left;
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+.sort{
+	display: inline-block;
+	background: url(../../common/images/scu_ic.png) no-repeat 60px -572px;
+	padding-right: 30px;
+	cursor: pointer;
+}
+.sort—up{
+	background-position: 60px -628px;
+}
+.sort-num{
+	background-position: 35px -572px;
+}
+.sort-num-up{
+	background-position: 35px -628px;
+}
+.join-tag .fl{
+	font-size: 14px;
+	color: #555;
+}
+.join-tag .fl span{
+	color: #246ac9;
+}
+.join-tag .pre-btn{
+	margin-left: 10px;
+}
+.res-time img{
+	padding: 50px 0 20px;
+}
+.res-time p{
+	padding-top: 10px;
+	font-size: 16px;
+	color: #e4422d;
+}
+.res-time p.res-role{
+	font-size: 20px;
+	color: #666;
+}
+/*我参与的end*/
+
+
+/*统计报告*/
+.join-info{
+	border: 1px solid #d8d9e5;
+}
+.join-tit{
+	position: relative;
+	padding: 0 20px;
+	background: #edeef2;
+	height: 54px;
+	border-bottom: 1px solid #d8d9e5;
+}
+.join-num{
+	font-size: 18px;
+	color: #555;
+	line-height: 54px;	
+}
+.join-num strong{
+	color: #ff5500;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: Arial;
+	vertical-align: middle;
+}
+.join-tit .state{
+	margin-top: 10px;
+}
+.join-tit .review-btn{
+	margin: 12px 0 0 10px;
+}
+.join-tit .state label{
+	padding-right: 0;
+	font-size: 14px;
+	color: #555;
+}
+.join-tit .state .select_box{
+	background: #fff;
+}
+.map{
+	padding: 20px 0 40px;
+}
+.left-box,
+.right-box{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.left-box img,
+.right-box img{
+	vertical-align: bottom;
+}
+.join-tab{
+	position: absolute;
+	left: 10px;
+	bottom: 0;
+	margin-top: 7px;
+}
+.join-tab a{
+	position: relative;
+	display: inline-block;
+	border: 1px solid #edeef2;
+	height: 40px;
+	padding: 0 20px;
+	line-height: 40px;
+	color: #333;
+	font-size: 16px;
+}
+.join-tab a em{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+}
+.join-tab a:hover,
+.join-tab a.active{
+	background: #fff;
+	border-color: #d8d9e5;
+	border-bottom-color: #fff;
+	color: #246ac9;
+}
+.join-tab a:hover em,
+.join-tab a.active em{
+	display: block;
+}
+.check-mass{
+	padding: 30px 20px;
+}
+.check-mass dt span,
+.check-mass dl dd li span,
+.check-mass dl dd li a{
+	float: left;
+	display: inline-block;
+	padding-right: 10px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #333;
+}
+.check-mass dt a{
+	float: left;
+	min-width: 126px;
+	position: relative;
+	display: inline-block;
+	padding: 0 24px 0 14px ;
+	border: 1px solid #dbdbdb;
+	height: 26px;
+	font-size: 14px;
+	color: #555;
+	line-height: 26px;
+}
+.check-mass dt a em{
+	position: absolute;
+	right: 6px;
+	top:0;
+	height: 26px;
+	background: url(../images/close.png) no-repeat 0 8px;
+	width: 11px;
+}
+.check-mass dl dd{
+	padding: 5px;
+	background: #f9f9fa;
+	border: 1px solid #ebebeb;
+}
+.check-mass dl dd li a{
+	padding-left: 10px;
+}
+.check-mass dl dd li{
+	padding: 3px 5px;
+}
+.check-mass dl dd li:first-child{
+	border-bottom: 1px dashed #dedede;
+}
+.check-mass dl dd li a.active{
+	color: #246ac9;
+}
+.check-mass dl dd li span{
+	padding-right: 0;
+	width: 60px;
+	text-align: right;
+}
+.problem{
+	margin-top: 35px;
+	padding-left: 10px;
+	font-size: 16px;
+	color: #333;
+	line-height: 18px;
+	border-left: 3px solid #629ade;
+}
+.img02{
+	margin-top: 48px;
+}
+.check-mass .map{
+	padding-bottom: 20px;
+}
+.check-mass .join-list{
+	margin: 0 15px;
+}
+/*统计报告end*/
