@@ -1,0 +1,19 @@
+﻿<div class="popbox pop-original" id="pop_content">
+	<div class="clearfix pop-originaltab">
+    	<p class="fl">{{#title}}</p>
+        <p class="fr"><input type="button"  id="pop_close" class="systembtn-close" value="" /></p>
+    </div>
+    <div class="popbox-font">
+    	<div class="pop-originalfont">
+        	<div class="pop-originalbox">
+            	<div class="original-mark"><p class="{{iconcss}}"></p></div>
+                <div class="original-scrollbar"><!------低于此高度不出现滚动条，超过此高度才出现------>
+                	<div class="original-force">
+                    	<p>{{#content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-originalbtn"><input style="display:none;" type="button" id="btn_pop_cancle" class="btn-grey" value="取消" /><input type="button" id="btn_pop_ok" class="btn-blue" value="确定" /></div>
+        </div>
+    </div>
+</div>

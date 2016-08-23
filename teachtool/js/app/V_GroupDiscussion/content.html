@@ -1,0 +1,45 @@
+﻿<div class="tabd">
+    <font>
+        <b class="orange"><input type="button" name="btn_audio" audiourl="{{titles.relationUrl}}\{{titles.promptAudio}}" class="btn-playorange" oriclass="btn-playorange" value=""  /></b>
+         {{#titles.promptText}}
+    </font>
+</div>
+
+<div class="paperlist">
+    <div class="talk-tips group-tips" style="max-height: 420px;height: auto;">
+        {{each questions as question q}}
+        {{each question.contents as content c}}
+        {{if c==0}}
+        <div class="talk-tipstab">
+            <input type="button" name="btn_audio" audiourl="{{question.relationUrl}}\{{question.textAudio}}" class="btn-play" value="" />{{#content}}
+        </div>
+        <dl class="talk-tipslist">
+            {{else}}
+        
+            <!--<dt>{{#content}}</dt> -->
+            <dd><span>{{#content}}</span></dd>
+            {{/if}}
+        <!--<dl class="talk-tipslist">
+            <dt>If you are the host, you need to: </dt>
+            <dd><span>1.</span><span>introduce the topic;</span></dd>
+            <dd><span>2.</span><span>ask the guests about whether they agree with the statement and why;</span></dd>
+            <dd><span>3.</span><span>ask more questions if the guests haven’t made their points clear.</span></dd>
+        </dl>
+        <dl class="talk-tipslist">
+            <dt>If you are the town resident, you need to:  </dt>
+            <dd><span>1.</span><span>introduce the topic;</span></dd>
+            <dd><span>2.</span><span>ask the guests about whether they agree with the statement and why;</span></dd>
+            <dd><span>3.</span><span>ask more questions if the guests haven’t made their points clear.</span></dd>
+        </dl>
+        <dl class="talk-tipstopic">
+            <dd>It’s better to have your own opinion about the topic. But if you do find it difficult, you may turn to what </dd>
+        </dl>   -->
+            {{/each}}
+        </dl>
+        <div class="talk-tipstoplabel"></div>
+        <div class="talk-tipstop"></div>
+        <div class="talk-tipsbottom"></div>
+        {{/each}}
+    </div>
+</div>
+

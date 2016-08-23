@@ -1,0 +1,16 @@
+﻿
+<div class="paperlist">
+     {{each list}}
+    <div class="listen-empty">
+        <div class="listen-emptytext">
+            <dl>
+                <dd>
+                    {{#$value.content}}
+                </dd>
+            </dl>
+        </div>
+        <div class="listen-emptbtn">
+             <input  name="btn_audio" type="button" class="btn-play" audiourl="{{$value.Audiourl}}" value="" /><input name="btn_voice" controlid="{{$value.controlid}}"  type="button" class="btn-voice" voicetime="{{$value.answertime}}" value="" /><input name="btn_refresh" class="{{$value.refreshClass}}" audiourl="{{$value.refreshAudio}}" type="button"  value="" /></div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,19 @@
+﻿
+
+<div class="paperlist picturepagelist" style="line-height: 470px;text-align: center;" id="page0">
+    <img src="{{SectionData.QuestionsList[0].topicContent}}" style="vertical-align: middle;margin: 0 auto;max-height:470px;">
+</div>
+
+{{each SectionData.QuestionsList[0].PageQuestionList as quesItem outerIndex}}
+
+<ul class="paperlist picturepagelist"  id="page{{outerIndex+1}}" style="display:none;">
+    {{each quesItem as innerItem innerIndex}}
+    <li class="clearfix">
+        <em>{{innerItem.index}}</em>
+        <div class="text"><font>{{innerItem.questionText}}</font></div>
+        <div class="btn"><input type="button" class="btn-play" value="" audiourl="{{innerItem.questionAudio}}" name="btn_audio"><input type="button" class="btn-voice" value="" name="btn_voice" controlid="{{innerItem.controlid}}" voicetime="{{innerItem.answertime}}"><input type="button" class="{{innerItem.refreshClass}}" value="" name="btn_refresh" audiourl="{{innerItem.refreshAudio}}">
+        </div>
+    </li>
+    {{/each}}
+</ul>
+{{/each}}

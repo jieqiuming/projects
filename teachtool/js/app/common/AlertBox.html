@@ -1,0 +1,15 @@
+﻿<div class="popbox" style="width:360px;" id="tips_popbox">
+	<div class="clearfix popbox-tab">
+    	<p class="fl">{{title}}</p>
+        <!--<p class="fr"><input name="btn_close" type="button" class="systembtn-close" value=""></p>-->
+    </div>
+    <div class="popbox-font">
+    	<div class="remind">{{text}}</div>
+        <div class="remind-btn">
+            <input name="btn_ok"type="button" class="btn-blue" value="确定">
+            {{if type}}
+            <input name="btn_cancel"type="button" class="btn-grey" value="取消">
+            {{/if}}
+        </div>
+    </div>
+</div>

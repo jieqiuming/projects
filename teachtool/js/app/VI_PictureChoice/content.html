@@ -1,0 +1,16 @@
+﻿<ul class="paperlist">
+    {{each questions as question i}}
+    <li class="clearfix">
+        <em>{{question.num}}</em>
+        <div class="text lineone">
+            <font>
+                {{each question.choices as choice j}}
+                <p><span style="cursor: pointer;" name="choice" questionNum="{{question.num}}" flag="{{j}}">{{#numToChar(j)}}.{{choice}}</span></p>
+                {{/each}}
+            </font>
+        </div>
+        <div class="btn">
+            <input type="button" name="btn_audio" audiourl="{{question.relationUrl}}\{{question.dialogAudio}}" class="btn-play" value="" /><input type="button" name="btn_content" content="{{question.passageText}}" class="btn-original" value="" /><input type="button" name="btn_answer" answer="{{question.answer}}" class="btn-answer" value="" /></div>
+    </li>
+    {{/each}}
+</ul>

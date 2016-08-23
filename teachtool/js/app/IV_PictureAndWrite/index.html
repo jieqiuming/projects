@@ -1,0 +1,35 @@
+﻿<div class="paperlist picturepagelist" style="line-height: 470px;text-align: center;" id="page0">
+    <img src="{{SectionData.QuestionsList[0].topicContent}}" style="vertical-align: middle;margin: 0 auto;">
+</div>
+
+<div class="paperlist picturepagelist" id="page1" style="display:none;">
+    <div class="listen-sorting">
+        <div class="paper-table">
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                
+                {{each SectionData.QuestionsList[0].QuestionList[0].table.row as rowItem outerIndex}}
+                    {{if outerIndex == 0 }}
+                    <tr>
+                        {{each rowItem.data as dataItem innerIndex}}
+                            <th width="25%">{{dataItem.data}}</th>
+                        {{/each}}
+                    </tr>
+                    {{else}}
+                    <tr>
+                        {{each rowItem.data as dataItem2 innerIndex2}}
+                            {{if dataItem2.data.indexOf("/textarea/") != -1}}    
+                                <td><lable><textarea name="textAnswer" textid="{{dataItem2.textid}}">{{dataItem2.textcontent}}</textarea></lable></td>
+                            {{else}}
+                                <td>{{dataItem2.data}}</td>
+                            {{/if}}
+                        {{/each}}
+                        
+                    </tr>
+                    {{/if}}
+                {{/each}}
+            </tbody></table>
+        </div>
+        <div class="listen-emptbtn mt10"><input type="button" class="btn-answer" value="" name="btn_answer" answer="{{SectionData.QuestionsList[0].QuestionList[0].answerText}}"></div>
+    </div>
+</div>
